@@ -6,10 +6,10 @@ import unittest
 
 from http import cookiejar
 
-from ghost import GhostTestCase
-from ghost.ghost import default_user_agent
+from .ghost import GhostTestCase
+from .ghost.ghost import default_user_agent
 
-from app import app
+from .app import app
 
 
 PORT = 5000

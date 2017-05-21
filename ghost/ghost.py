@@ -45,6 +45,7 @@ from PySide2.QtNetwork import (
     QNetworkRequest,
 )
 from xvfbwrapper import Xvfb
+import collections
 
 
 default_user_agent = (
@@ -114,7 +115,7 @@ class GhostWebPage(QWebPage):
         self.session.logger.info("alert('%s')", message)
 
     def _get_value(self, value):
-        if callable(value):
+        if isinstance(value, collections.Callable):
             return value()
 
         return value

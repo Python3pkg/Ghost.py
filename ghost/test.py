@@ -6,7 +6,7 @@ import time
 from unittest import TestCase
 from wsgiref.simple_server import WSGIRequestHandler, WSGIServer, make_server
 
-from ghost import Ghost
+from .ghost import Ghost
 
 
 class GhostWSGIServer(WSGIServer):
